@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section - Purple */
+.header {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    padding: 60px 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.header h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.number-input {
+    width: 120px;
+    height: 70px;
+    padding: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.number-input:focus {
+    outline: none;
+    border-color: white;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.number-input::placeholder {
+    color: #999;
+}
+
+.convert-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    color: #7c3aed;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.convert-btn:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.convert-btn:active {
+    transform: translateY(0);
+}
+
+/* Results Section - Dark */
+.results-section {
+    background-color: #2d3748;
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.conversion-box {
+    background-color: #1a202c;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.conversion-box:hover {
+    border-color: rgba(124, 58, 237, 0.4);
+    background-color: rgba(124, 58, 237, 0.05);
+}
+
+.conversion-box h2 {
+    color: #e0e7ff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.conversion-box p {
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .input-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .number-input {
+        width: 100px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .convert-btn {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .results-section {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .conversion-box {
+        padding: 20px;
+    }
+
+    .conversion-box h2 {
+        font-size: 20px;
+    }
+
+    .conversion-box p {
+        font-size: 16px;
+    }
+}
